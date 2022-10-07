@@ -1,5 +1,5 @@
 import request from "request";
-import { constants } from "../../config.js";
+import { constants } from "../config.js";
 import Cities from "../models/Cities.js";
 
 //Extrae los datos de la base de datos
