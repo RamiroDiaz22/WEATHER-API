@@ -1,28 +1,32 @@
 # Weather API
 
-## Instrucciones
+## Configuración inicial
 
-Desde la carpeta `WEATHER-API` se pueden ejecutar, para instalar las dependencias necesarias, el siguiente comando:
+1. Ejecutar `npm install` desde la carpeta "WEATHER-API".
+2. Ejecutar `npm test` para correr los tests.
+3. Ejecutar `npm run dev` para inicializar el servidor localmente (Se reseteará automáticamente si se realiza algún cambio).
+4. El servidor ya se encuentra configurado, se puede hacer requests a `http://localhost:4000`.
 
-#### `npm install`
+## Endpoin
 
-Se podra comenzar a obtener información, mediante una peticion GET, de forma local desde http://localhost:4000, proporcionando desde el body de tu aplicación el nombre de la ciudad que desea.
-
-#### `Ejemplo:`
-
-name: "Francia"
+```
+GET /api/city
+```
 
 ### Datos
 
-Devolverá un JSON con name, temp (en grados farenheit).
+Devolverá devolverá la siguiente estructura (temp en grados `Fahrenheit`).
 
-#### `Ejemplo:`
-
+```js
 {
 name: "Francia",
 temp: 230
 }
+```
 
-#### Adicionales
+- `name` de tipo string
+- `temp` de tipo number
 
-Desde el header, se podra acceder a el delay o timepo de carga, a través de la clave "time-delay"
+### Adicionales
+
+Desde el `header`, se podrá acceder a el delay o tiempo de carga, a través de la propiedad `time-delay`

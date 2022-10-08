@@ -1,10 +1,10 @@
-import { Router } from "express";
-import { weatherData } from "../controllers/city.controllers.js";
-import { fakeError } from "../middlewares/fakeError.js";
-import { delayTime } from "../middlewares/delayTime.js";
+const express = require("express");
+const weatherData = require("../controllers/city.controllers.js");
+const fakeError = require("../middlewares/fakeError.js");
+const delayTime = require("../middlewares/delayTime.js");
 
-const router = Router();
+const router = express.Router();
 
-router.get("/", [fakeError, delayTime], weatherData, delayTime);
+router.get("/", fakeError, weatherData, delayTime);
 
-export default router;
+module.exports = router;

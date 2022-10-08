@@ -2,7 +2,7 @@
 // En el caso de que este nùmero, sea menor a 0.15, se ejecutara nuevamente la función
 // aumentando el valor del contador de fallos.
 // Si falla 3 veces seguidas, enviará un error al cliente.
-export const fakeError = (req, res, next) => {
+const fakeError = (req, res, next) => {
   const checkProbability = (n = 0) => {
     const probability = Math.random();
 
@@ -17,3 +17,5 @@ export const fakeError = (req, res, next) => {
   };
   checkProbability();
 };
+
+module.exports = fakeError;

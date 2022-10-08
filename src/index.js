@@ -1,5 +1,5 @@
-import app from "./app.js";
-import "./database.js";
+const app = require("./app.js");
+require("./database.js");
 
 async function main() {
   try {
