@@ -7,6 +7,10 @@
 3. Ejecutar `npm run dev` para inicializar el servidor localmente (Se reseteará automáticamente si se realiza algún cambio).
 4. El servidor ya se encuentra configurado, se puede hacer requests a `http://localhost:4000`.
 
+### Nota
+
+Deberá crear una base de datos, en MongoDB, llamada `weatherdb` y conectarla en el archivo `./database.js`.
+
 ## Endpoin
 
 ```
