@@ -6,7 +6,7 @@ const citySchema = new mongoose.Schema(
     temp: Number,
     temp_min: Number,
     temp_max: Number,
-    img: String,
+    weather_icon: String,
   },
   {
     timestamps: true,

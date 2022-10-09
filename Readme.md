@@ -24,12 +24,18 @@ Devolverá devolverá la siguiente estructura (temp en grados `Fahrenheit`).
 ```js
 {
 name: "Francia",
-temp: 230
+temp: 298.14,
+temp_min: 285.14,
+temp_max: 298.14,
+img: "04d",
 }
 ```
 
-- `name` de tipo string
-- `temp` de tipo number
+- `name` de tipo String
+- `temp` de tipo Number
+- `temp_min` de tipo Number,
+- `temp_max` de tipo Number,
+- `weather_icon` de tipo String,
 
 ### Adicionales
 

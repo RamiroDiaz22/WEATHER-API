@@ -27,17 +27,18 @@ const weatherData = async (req, res, next) => {
     //Accede a la API en caso de que sea la primera vez que se busca la ciudad
     const url = `${constants.weatherApi.BASE_URL}${name}&appid=${constants.weatherApi.SECRET_KEY}&lang=sp`;
     request({ url, json: true }, async (error, { body }) => {
-      if (body.cod !== 200) {
+      if (body.cod !== 200 || error) {
         return res.status(400).json({ message: body.message });
       }
 
       //Almacena los datos de la cidad en la base de datos, para una nueva llamada futura
+      const icon_url = body.weather[0].icon;
       const newCity = await new Cities({
         name: body.name.toLowerCase(),
         temp: body.main.temp,
         temp_min: Math.round(body.main.temp_min),
         temp_max: Math.round(body.main.temp_min),
-        img: body.weather[0].icon,
+        weather_icon: `http://openweathermap.org/img/wn/${icon_url}@2x.png`,
       }).save();
 
       next();
