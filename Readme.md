@@ -27,7 +27,7 @@ name: "Francia",
 temp: 298.14,
 temp_min: 285.14,
 temp_max: 298.14,
-img: "04d",
+img: "http://openweathermap.org/img/wn/04d@2x.png",
 }
 ```
 
