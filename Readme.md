@@ -4,7 +4,7 @@
 
 1. Ejecutar `npm install` desde la carpeta "WEATHER-API".
 2. Ejecutar `npm test` para correr los tests.
-3. Ejecutar `npm run dev` para inicializar el servidor localmente (Se reseteará automáticamente si se realiza algún cambio).
+3. Ejecutar `npm start` para inicializar el servidor localmente (Se reseteará automáticamente si se realiza algún cambio).
 4. El servidor ya se encuentra configurado, se puede hacer requests a `http://localhost:4000`.
 
 ### Nota
